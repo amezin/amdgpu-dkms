@@ -1,0 +1,10 @@
+diff --git a/drivers/gpu/drm/amd/dkms/dkms.conf b/drivers/gpu/drm/amd/dkms/dkms.conf
+index d332a203ed39..6ed1eb5275e3 100644
+--- a/drivers/gpu/drm/amd/dkms/dkms.conf
++++ b/drivers/gpu/drm/amd/dkms/dkms.conf
+@@ -39,3 +39,5 @@ num_cpu_cores()
+ }
+ 
+ MAKE[0]="make -j$(num_cpu_cores) kdir=$kernel_source_dir -C $kernel_source_dir M=$dkms_tree/$module/$module_version/build"
++
++BUILD_EXCLUSIVE_KERNEL="^(4\.19\.)"

@@ -1,0 +1,14 @@
+diff --git a/drivers/gpu/drm/amd/dkms/Makefile b/drivers/gpu/drm/amd/dkms/Makefile
+index 25bb07f18953..7b3c5deb7e2f 100644
+--- a/drivers/gpu/drm/amd/dkms/Makefile
++++ b/drivers/gpu/drm/amd/dkms/Makefile
+@@ -33,6 +33,9 @@ else
+ DRM_VER=$(shell sed -n 's/^VERSION = \(.*\)/\1/p' $(kdir)/Makefile)
+ DRM_PATCH=$(shell sed -n 's/^PATCHLEVEL = \(.*\)/\1/p' $(kdir)/Makefile)
+ endif
++else
++DRM_VER=$(shell sed -n 's/^VERSION = \(.*\)/\1/p' $(kdir)/Makefile)
++DRM_PATCH=$(shell sed -n 's/^PATCHLEVEL = \(.*\)/\1/p' $(kdir)/Makefile)
+ endif
+ 
+ subdir-ccflags-y += \
